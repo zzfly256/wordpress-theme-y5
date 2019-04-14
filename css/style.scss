@@ -1,0 +1,241 @@
+body{
+  background: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+    width: 90%;
+  }
+}
+
+/* 侧边栏 */
+header{
+  background: #212227;
+  position: fixed!important;
+  top: 0;
+  bottom: 0;
+  padding: 0!important;
+  width: 250px;
+  box-shadow: 0px 0px 5px #000000;
+
+  /* LOGO 文字 */
+  & h2 {
+    width: 100%;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #aaa;
+    border-bottom: 1px solid #333333;
+  }
+
+  & .logo{
+    width: 154px;
+    height: 154px;
+    text-align: center;
+    margin: 29.6px auto;
+    display: block;
+    border: 1px solid #333333;
+    border-radius: 50%;
+  }
+
+  /* 侧边栏菜单 - bs 组件*/
+  & .card{
+    border: 0px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: #212227;
+    padding: 0;
+    & .card-header{
+      padding: 0;
+      & button{
+        text-decoration: none;
+        color: #aaa;
+        padding-left: 3rem;
+        line-height: 2.5rem;
+        font-size: 1.1rem;
+      }
+    }
+    & .card-body{
+      padding: 0;
+    }
+    & #collapseOne, #collapseTwo, #collapseThree{
+      background: rgba(0,0,0,.3)!important;
+      & li{
+        display: block;
+        padding: 0;
+        margin-left: 1rem;
+        border-left:2px solid #222222;
+        transition: 200ms;
+      }
+      & li a{
+        list-style: none;
+        padding-left: 2rem;
+        line-height: 3rem;
+        color: #aaa;
+        transition: 500ms;
+        display: block;
+        width: 100%;
+        margin-left: 2px;
+      }
+      & li a:hover{
+        text-decoration: none;
+      }
+      & li:hover, & li:active{
+        border-left:2px solid #fff;
+      }
+    }
+  }
+}
+
+/* 主内容 */
+#main{
+  margin-left: 300px;
+  padding:0 5%;
+  width: 100%;
+  & nav{
+    width: 100%;
+    height: 4rem;
+    background: #fff url('../image/border.png') repeat-x bottom;
+
+    & li{
+      display: block;
+      float: left;
+
+      & a{
+        line-height: 4rem;
+        color: #777777;
+        padding: 0 1rem;
+      }
+    }
+
+    & .search{
+      width: 20.8%;
+      float: right;
+      line-height: 2.472rem;
+      margin-top: 0.58rem;
+      background: #efefef;
+      border: none;
+      margin-right: 0.58rem;
+      padding-left: 16.4px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      transition: 200ms;
+
+      &:focus{
+        width: 38.2%;
+      }
+    }
+  }
+}
+
+#content {
+  article {
+    background: #ffffff;
+    float: left;
+    margin-top: 30px;
+    //box-shadow: 0px 0px 5px #dddddd;
+
+    & .title{
+      font-size: 1.6rem;
+      color: #555555;
+      text-align: left;
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      background:#ffffff;
+      border-bottom: 1px solid #f1f1f1;
+
+      & a{
+        text-decoration: none;
+        transition: 200ms;
+        color: #666666;
+        padding-bottom: 0.5rem;
+        display: block;
+
+        &:hover{
+          color: #000000;
+        }
+      }
+
+    }
+
+  & .cover-panel{
+      width: 100%;
+      padding: 1.8rem 2rem 0;
+
+      & .cover-image{
+        width: 100%;
+        height: 350px;
+        border: 1px solid #cccccc;
+        background-position: center center;
+        background-size: 100% auto;
+      }
+    }
+
+    & .article-cover{
+      width: 100%;
+      height: auto;
+      margin: -1.1rem auto 1rem auto;
+      border: 1px solid #cccccc;
+      background-position: center center;
+      background-size: 100% auto;
+    }
+
+    & .text {
+      line-height: 2;
+      font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: 1.125rem;
+      color: #655555;
+      text-align: justify;
+      padding: 1rem 1.5rem 1.8rem;
+      min-height: 5rem;
+    }
+  }
+}
+
+/* 底部标签 */
+#links{
+  width: 100%;
+  background: #ffffff;
+  float: left;
+  margin-top: 30px;
+  padding: 1rem 1rem 0.6rem 1rem;
+
+  & li{
+    display: block;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    & a {
+      padding: 5px 12px 5px 12px;
+      margin-right: 10px;
+      line-height: 25px;
+      color: #555555;
+      text-decoration: none;
+      transition: 200ms;
+      &:hover{
+        background: #eeeeee;
+      }
+    }
+  }
+}
+
+footer{
+  margin: 0px auto;
+  float: left;
+  line-height: 3rem;
+  //background: #212227;
+  height: 3rem;
+  width: 100%;
+  color: #aaaaaa;
+  padding-left: 2rem;
+  & span{
+    text-align: right;
+    float: right;
+    font-size: 0.5rem;
+    color:#555;
+    margin-right: 1rem;
+  }
+}
