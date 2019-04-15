@@ -29,11 +29,14 @@
 
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                        <li><a href="#">运行环境</a></li>
-                        <li><a href="#">性能监控</a></li>
-                        <li><a href="#">网站列表</a></li>
-                        <li><a href="#">数据库</a></li>
-                        <li><a href="#">FTP 管理</a></li>
+                    <?php
+                    if (function_exists('wp_nav_menu')) {
+                        $wp_nav_menu_out = wp_nav_menu(array('theme_location'=>'category_nav_menu', 'container'=>false, 'echo'=>false));
+                        echo preg_replace(array('#^<ul[^>]*>#', '#</ul>$#'), '', $wp_nav_menu_out);
+                    } else {
+
+                    }
+                    ?>
                     </div>
                 </div>
             </div>
@@ -47,8 +50,14 @@
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                     <div class="card-body">
-                        <li><a href="#">管理员</a></li>
-                        <li><a href="#">面板设置</a></li>
+                        <?php
+                        if (function_exists('wp_nav_menu')) {
+                            $wp_nav_menu_out = wp_nav_menu(array('theme_location'=>'about_nav_menu', 'container'=>false, 'echo'=>false));
+                            echo preg_replace(array('#^<ul[^>]*>#', '#</ul>$#'), '', $wp_nav_menu_out);
+                        } else {
+
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -57,7 +66,7 @@
     </header>
     <div id="main">
         <nav class="menu">
-            <li><a href="">主页</a></li>
+            <?php if (function_exists('get_breadcrumbs')){get_breadcrumbs(); } ?>
 
             <form action="/" method="get">
                 <input type="text" name="s" placeholder="全站搜索" class="search">

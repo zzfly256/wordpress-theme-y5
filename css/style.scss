@@ -103,10 +103,11 @@ header{
     & li{
       display: block;
       float: left;
+      color: #555555;
 
       & a{
         line-height: 4rem;
-        color: #777777;
+        color: #999999;
         padding: 0 1rem;
       }
     }
@@ -137,6 +138,7 @@ header{
     background: #ffffff;
     float: left;
     margin-top: 30px;
+    width: 100%;
     //box-shadow: 0px 0px 5px #dddddd;
 
     & .title{
@@ -159,9 +161,17 @@ header{
         }
       }
 
+      & .date{
+        font-size: 0.9rem;
+        font-weight: 300;
+        color: #aaa;
+        text-align: right;
+        margin-top: -2rem;
+      }
+
     }
 
-  & .cover-panel{
+    & .cover-panel{
       width: 100%;
       padding: 1.8rem 2rem 0;
 
@@ -191,9 +201,74 @@ header{
       text-align: justify;
       padding: 1rem 1.5rem 1.8rem;
       min-height: 5rem;
+
+      & img{
+        max-width: 100%;
+        text-align: center;
+        margin: 30px auto;
+        display: block;
+        height: auto;
+      }
+
+      & pre{
+        max-width: 860px;
+        margin: 20px auto;
+        background: #efefef;
+        padding: 1rem 1.5rem;
+        & code {
+          color: darkred;
+        }
+      }
+
+      & h1{
+        font-size: 1.5rem;
+        color: #555555;
+        text-align: left;
+        padding: 2rem 1.5rem 1.5rem 0rem;
+        background:#ffffff;
+        border-bottom: 1px solid #f1f1f1;
+        font-weight: 300;
+      }
+
+      & h2{
+        font-size: 1.4rem;
+        color: #555555;
+        text-align: left;
+        padding: 2rem 1.5rem 1.5rem 0rem;
+        background:#ffffff;
+        border-bottom: 1px solid #f1f1f1;
+        font-weight: 300;
+      }
+
     }
   }
 }
+
+/*分页的样式 */
+.pagination{
+  display: block;
+  margin: 30px 0.85rem 30px 0.85rem;
+  float: left;
+
+  & a,span{
+    padding: 0.3rem 0.65rem 0.3rem 0.65rem;
+    margin-right: 0.6rem;
+    line-height: 25px;
+    color: #777777;
+    text-decoration: none;
+    transition: 200ms;
+  }
+
+  & a:hover{
+      background: #eeeeee;
+  }
+
+
+  & .current{
+    color: #000000;
+  }
+}
+
 
 /* 底部标签 */
 #links{
@@ -208,7 +283,7 @@ header{
     float: left;
     margin-top: 0px;
     margin-bottom: 10px;
-    & a {
+    & a{
       padding: 5px 12px 5px 12px;
       margin-right: 10px;
       line-height: 25px;
@@ -230,12 +305,13 @@ footer{
   height: 3rem;
   width: 100%;
   color: #aaaaaa;
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   & span{
     text-align: right;
     float: right;
     font-size: 0.5rem;
-    color:#555;
+    color:#aaaaaa;
     margin-right: 1rem;
   }
 }
+

@@ -83,10 +83,11 @@ header {
     background: #fff url("../image/border.png") repeat-x bottom; }
     #main nav li {
       display: block;
-      float: left; }
+      float: left;
+      color: #555555; }
       #main nav li a {
         line-height: 4rem;
-        color: #777777;
+        color: #999999;
         padding: 0 1rem; }
     #main nav .search {
       width: 20.8%;
@@ -107,7 +108,8 @@ header {
 #content article {
   background: #ffffff;
   float: left;
-  margin-top: 30px; }
+  margin-top: 30px;
+  width: 100%; }
   #content article .title {
     font-size: 1.6rem;
     color: #555555;
@@ -123,6 +125,12 @@ header {
       display: block; }
       #content article .title a:hover {
         color: #000000; }
+    #content article .title .date {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: #aaa;
+      text-align: right;
+      margin-top: -2rem; }
   #content article .cover-panel {
     width: 100%;
     padding: 1.8rem 2rem 0; }
@@ -147,6 +155,52 @@ header {
     text-align: justify;
     padding: 1rem 1.5rem 1.8rem;
     min-height: 5rem; }
+    #content article .text img {
+      max-width: 100%;
+      text-align: center;
+      margin: 30px auto;
+      display: block;
+      height: auto; }
+    #content article .text pre {
+      max-width: 860px;
+      margin: 20px auto;
+      background: #efefef;
+      padding: 1rem 1.5rem; }
+      #content article .text pre code {
+        color: darkred; }
+    #content article .text h1 {
+      font-size: 1.5rem;
+      color: #555555;
+      text-align: left;
+      padding: 2rem 1.5rem 1.5rem 0rem;
+      background: #ffffff;
+      border-bottom: 1px solid #f1f1f1;
+      font-weight: 300; }
+    #content article .text h2 {
+      font-size: 1.4rem;
+      color: #555555;
+      text-align: left;
+      padding: 2rem 1.5rem 1.5rem 0rem;
+      background: #ffffff;
+      border-bottom: 1px solid #f1f1f1;
+      font-weight: 300; }
+
+/*σêåΘí╡τÜäµá╖σ╝Å */
+.pagination {
+  display: block;
+  margin: 30px 0.85rem 30px 0.85rem;
+  float: left; }
+  .pagination a, .pagination span {
+    padding: 0.3rem 0.65rem 0.3rem 0.65rem;
+    margin-right: 0.6rem;
+    line-height: 25px;
+    color: #777777;
+    text-decoration: none;
+    transition: 200ms; }
+  .pagination a:hover {
+    background: #eeeeee; }
+  .pagination .current {
+    color: #000000; }
 
 /* σ║òΘâ¿µáçτ¡╛ */
 #links {
@@ -177,12 +231,12 @@ footer {
   height: 3rem;
   width: 100%;
   color: #aaaaaa;
-  padding-left: 2rem; }
+  padding-left: 1.5rem; }
   footer span {
     text-align: right;
     float: right;
     font-size: 0.5rem;
-    color: #555;
+    color: #aaaaaa;
     margin-right: 1rem; }
 
 /*# sourceMappingURL=style.css.map */

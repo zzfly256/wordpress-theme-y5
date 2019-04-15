@@ -11,7 +11,9 @@
                          <div class="cover-image" style="background-image: url('<?php //bloginfo('template_directory'); ?>/image/main.jpg')"></div>
                      </div-->
 
-                    <div class="text"><?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,'...'); ?></div>
+                    <div class="text">
+                        <?php the_content("Read More..."); ?>
+                    </div>
                 </article>
 
                 <?php endwhile; ?>
@@ -22,20 +24,8 @@
                 </article>
                 <?php endif; ?>
 
-                <?php pagenav($query_string); ?>
 
             </div>
-<!--            <div id="links">-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--            </div>-->
             <footer>
                 By烟花易冷 © 2012 - 2019
                 <span>

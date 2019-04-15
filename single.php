@@ -5,13 +5,19 @@
                 <?php while (have_posts()) : the_post(); ?>
 
                 <article>
-                    <h2 class="title"><a href="<?php the_permalink() ?>"><?php the_title_attribute(); ?></a></h2>
 
-                     <!--div class="cover-panel">
-                         <div class="cover-image" style="background-image: url('<?php //bloginfo('template_directory'); ?>/image/main.jpg')"></div>
-                     </div-->
 
-                    <div class="text"><?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,'...'); ?></div>
+                    <h2 class="title">
+                        <a href="<?php the_permalink() ?>"><?php the_title_attribute(); ?></a>
+                        <div class="date">
+                            <?php the_time('Y-m-d') ?>
+                        </div>
+                    </h2>
+
+
+                    <div class="text">
+                        <?php the_content("Read More..."); ?>
+                    </div>
                 </article>
 
                 <?php endwhile; ?>
@@ -22,20 +28,8 @@
                 </article>
                 <?php endif; ?>
 
-                <?php pagenav($query_string); ?>
 
             </div>
-<!--            <div id="links">-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--                <li><a href="">标签</a></li>-->
-<!--            </div>-->
             <footer>
                 By烟花易冷 © 2012 - 2019
                 <span>
