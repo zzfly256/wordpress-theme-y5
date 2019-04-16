@@ -242,6 +242,118 @@ header{
 
     }
   }
+
+
+  .comment {
+    float: left;
+    width: 100%;
+    & h2{
+      font-size: 1.4rem;
+      margin-left: 1rem;
+    }
+    & .comment-list {
+      //float: left;
+      //clear: both;
+      list-style: none;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      & .avatar{
+        width: 1.5rem;
+        height: 1.5rem;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+
+      // fei废弃
+       & .content{
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 2rem;
+        max-width: 800px;
+        margin-left: 1rem;
+
+        & span{
+          font-weight: 400;
+          margin-right: 1rem;
+          & a{
+            color: #666666;
+          }
+        }
+        & p {
+          display: inline-block;
+          max-width: 860px;
+        }
+      }
+
+      & .author{
+        font-weight: 400;
+        & a{
+          color: #666666;
+          font-weight: 400;
+        }
+      }
+
+      & td, & th{
+        border-top: 0px;
+        font-weight: 300;
+      }
+    }
+    & .children {
+      & li {
+        margin-top: 0;
+      }
+    }
+    & table{
+      margin-top: 19rem;
+    }
+  }
+
+  #commentform{
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+    & .comment-form-left, & .comment-form-right{
+      margin-top: 30px;
+      padding-left: 1rem;
+    }
+    & .comment-form-left{
+      width: 32.2%;
+      float: left;
+    }
+    & .comment-form-right{
+      width: 67.8%;
+      float: right;
+    }
+    & li{
+      list-style: none;
+      margin-top: 1rem;
+      & input, & textarea{
+        border: 0px;
+        background: rgba(10, 10, 10, 0.05);
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+      }
+      & textarea{
+        height: 92px;
+      }
+      & span{
+        line-height: 36px;
+        color: #aaaaaa;
+      }
+      & .btn{
+        background: #aaaaaa;
+        border: 0px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        float: right;
+      }
+    }
+  }
+
 }
 
 /*分页的样式 */

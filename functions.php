@@ -1,6 +1,7 @@
 <?php
 
-function pagenav($query_string){
+// 分页函数
+function getPageNav($query_string){
     global $posts_per_page, $paged;
     $my_query = new WP_Query($query_string ."&posts_per_page=-1");
     $total_posts = $my_query->post_count;
@@ -28,7 +29,8 @@ function pagenav($query_string){
     }
 }
 
-function get_breadcrumbs()
+// 面包屑导航
+function getBreadcrumbs()
 {
     global $wp_query;
 
@@ -49,7 +51,7 @@ function get_breadcrumbs()
         }
         elseif ( is_search() ) {
 
-            echo "<li>搜索结果</li>";
+            echo "<li><a href='#'>搜索结果</a></li>";
         }
         elseif ( is_404() )
         {
@@ -89,7 +91,30 @@ function get_breadcrumbs()
     }
 }
 
+// 评论列表
+
+function getComment($comment, $args, $depth){
+
+    $GLOBALS['comment'] = $comment;
+    ?>
+
+        <tr class="comment-list" id="li-comment-<?php comment_ID(); ?>">
+            <td><?php if (function_exists('get_avatar') && get_option('show_avatars')) { echo get_avatar($comment, 48); } ?></td>
+            <td class="author"><?php printf(__('%s'), get_comment_author_link()); ?></td>
+            <td id="comment-<?php comment_ID(); ?>" title="留言时间：<?php echo get_comment_time('Y年m月d日 H:i'); ?>">
+                <?php comment_text(); ?>
+                <?php if ($comment->comment_approved == '0') : ?>
+                    <em>你的评论正在审核，稍后会显示出来！</em><br />
+                <?php endif; ?>
+            </td>
+        </tr>
+
+    <?php
+}
+
 if (function_exists('register_nav_menu')) {
     register_nav_menu('category_nav_menu', '主导航菜单 - 分类');
     register_nav_menu('about_nav_menu', '主导航菜单 - 关于');
 }
+
+?>

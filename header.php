@@ -66,7 +66,7 @@
     </header>
     <div id="main">
         <nav class="menu">
-            <?php if (function_exists('get_breadcrumbs')){get_breadcrumbs(); } ?>
+            <?php if (function_exists('getBreadcrumbs')){getBreadcrumbs(); } ?>
 
             <form action="/" method="get">
                 <input type="text" name="s" placeholder="全站搜索" class="search">

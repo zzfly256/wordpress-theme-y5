@@ -28,6 +28,10 @@
                 </article>
                 <?php endif; ?>
 
+                <div class="comment">
+                    <?php comments_template(); ?>
+                </div>
+
 
             </div>
             <footer>

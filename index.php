@@ -5,7 +5,7 @@
                 <?php while (have_posts()) : the_post(); ?>
 
                 <article>
-                    <h2 class="title"><a href="<?php the_permalink() ?>"><?php the_title_attribute(); ?></a></h2>
+                    <h2 class="title"><a alt href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?> <?php the_time('  Y-m-d') ?>"><?php the_title_attribute(); ?></a></h2>
 
                      <!--div class="cover-panel">
                          <div class="cover-image" style="background-image: url('<?php //bloginfo('template_directory'); ?>/image/main.jpg')"></div>
@@ -22,7 +22,7 @@
                 </article>
                 <?php endif; ?>
 
-                <?php pagenav($query_string); ?>
+                <?php getPageNav($query_string); ?>
 
             </div>
 <!--            <div id="links">-->
