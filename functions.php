@@ -51,7 +51,7 @@ function getBreadcrumbs()
         }
         elseif ( is_search() ) {
 
-            echo "<li><a href='#'>搜索结果</a></li>";
+            echo "<li> &raquo; <a href='#'>搜索结果</a></li>";
         }
         elseif ( is_404() )
         {

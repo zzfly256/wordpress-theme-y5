@@ -261,6 +261,12 @@ header {
       -moz-border-radius: 0;
       border-radius: 0;
       float: right; }
+#content .comment-info {
+  float: left;
+  display: block;
+  margin: 50px 1rem;
+  color: #ccc;
+  font-style: italic; }
 
 /*σêåΘí╡τÜäµá╖σ╝Å */
 .pagination {
