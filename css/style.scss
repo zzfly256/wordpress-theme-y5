@@ -2,6 +2,26 @@ body{
   background: #ffffff;
 }
 
+@media (max-width: 800px) {
+  header{
+    display: none;
+  }
+  #main{
+    margin-left: 0!important;
+    padding: 0!important;
+    overflow: hidden;
+  }
+  .container {
+    width: 90%;
+  }
+  #main nav .search{
+    width: 38.2%!important;
+  }
+  footer span{
+    float: left!important;
+  }
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1400px;
