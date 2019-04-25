@@ -18,7 +18,10 @@ body {
     width: 38.2% !important; }
 
   footer span {
-    float: left !important; } }
+    float: left !important; }
+
+  .inactive {
+    display: none; } }
 @media (min-width: 1200px) {
   .container {
     max-width: 1400px;
@@ -300,7 +303,8 @@ header {
   .pagination a:hover {
     background: #eeeeee; }
   .pagination .current {
-    color: #000000; }
+    color: #000000;
+    border-bottom: 1px solid #cccccc; }
 
 /* σ║òΘâ¿µáçτ¡╛ */
 #links {

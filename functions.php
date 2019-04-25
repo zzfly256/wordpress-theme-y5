@@ -8,8 +8,8 @@ function getPageNav($query_string){
     if(empty($paged))$paged = 1;
     $prev = $paged - 1;
     $next = $paged + 1;
-    $range = 3; // only edit this if you want to show more page-links
-    $showitems = ($range * 3)+1;
+    $range = 4; // only edit this if you want to show more page-links
+    $showitems = ($range * 2)+1;
 
     $pages = ceil($total_posts/$posts_per_page);
     if(1 != $pages){
