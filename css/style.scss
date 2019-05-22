@@ -23,6 +23,10 @@ body{
   .inactive{
     display: none;
   }
+  #content article .title .date{
+    text-align: left;
+    margin-top: 0!important;
+  }
 }
 
 @media (min-width: 1200px) {
