@@ -464,3 +464,46 @@ footer{
   }
 }
 
+/* 加载特效 */
+.pjax-loading {
+  animation: loading 2s linear 0s infinite;
+  -webkit-animation: loading 2s linear 0s infinite;
+  -o-animation: loading 2s linear 0s infinite;
+  -moz-animation: loading 2s linear 0s infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes loading {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes loading {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}

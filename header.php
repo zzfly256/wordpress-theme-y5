@@ -28,7 +28,7 @@
                 </div>
 
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="card-body" data-pjax>
                     <?php
                     if (function_exists('wp_nav_menu')) {
                         $wp_nav_menu_out = wp_nav_menu(array('theme_location'=>'category_nav_menu', 'container'=>false, 'echo'=>false));
@@ -49,7 +49,7 @@
                     </h5>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="card-body" data-pjax>
                         <?php
                         if (function_exists('wp_nav_menu')) {
                             $wp_nav_menu_out = wp_nav_menu(array('theme_location'=>'about_nav_menu', 'container'=>false, 'echo'=>false));

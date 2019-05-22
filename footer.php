@@ -9,9 +9,19 @@
 
 
 </div>
-
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script type="text/javascript">
+    $(document).pjax('[data-pjax] a', '#main', {fragment:'#main', timeout:8000});
+    $(document).on('pjax:send', function() {
+        $('#main').css("opacity","0.7");
+    })
+    $(document).on('pjax:complete', function() {
+        $('#main').css("opacity","1");
+    })
+</script>
+
 </body>
 </html>
