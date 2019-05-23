@@ -1,3 +1,8 @@
+<?php
+$isPjax = strpos($_SERVER['REQUEST_URI'], '?_pjax=%23main') !== false;
+    // 划分请求，非 pjax 请求则加载完整头部和左侧菜单栏信息
+    if (!$isPjax):
+?>
 <!doctype html>
 <html lang="cn">
 <head>
@@ -29,14 +34,14 @@
 
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body" data-pjax>
-                    <?php
-                    if (function_exists('wp_nav_menu')) {
-                        $wp_nav_menu_out = wp_nav_menu(array('theme_location'=>'category_nav_menu', 'container'=>false, 'echo'=>false));
-                        echo preg_replace(array('#^<ul[^>]*>#', '#</ul>$#'), '', $wp_nav_menu_out);
-                    } else {
+                        <?php
+                        if (function_exists('wp_nav_menu')) {
+                            $wp_nav_menu_out = wp_nav_menu(array('theme_location'=>'category_nav_menu', 'container'=>false, 'echo'=>false));
+                            echo preg_replace(array('#^<ul[^>]*>#', '#</ul>$#'), '', $wp_nav_menu_out);
+                        } else {
 
-                    }
-                    ?>
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -64,6 +69,9 @@
         </div>
 
     </header>
+
+    <?php endif;?>
+
     <div id="main">
         <nav class="menu">
             <?php if (function_exists('getBreadcrumbs')){getBreadcrumbs(); } ?>

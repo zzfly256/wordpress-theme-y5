@@ -1,4 +1,6 @@
-<?php get_header();?>
+<?php
+    get_header();
+?>
             <div id="content">
 
                 <?php if (have_posts()) : ?>
@@ -34,4 +36,6 @@
 
 
             </div>
-<?php get_footer();?>
+<?php
+    get_footer();
+?>

@@ -2,7 +2,7 @@
     By烟花易冷 © 2012 - 2019
     <span>
                 Powered by WP && Designed by Rytia
-            </span>
+    </span>
 </footer>
 </div>
 
@@ -14,7 +14,7 @@
 <script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
 
 <script type="text/javascript">
-    $(document).pjax('[data-pjax] a', '#main', {fragment:'#main', timeout:8000});
+    $(document).pjax('a', '#main', {fragment:'#main', timeout:8000});
     $(document).on('pjax:send', function() {
         $('#main').css("opacity","0.7");
     })
