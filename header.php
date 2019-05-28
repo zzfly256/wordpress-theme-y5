@@ -69,7 +69,8 @@ $isPjax = strpos($_SERVER['REQUEST_URI'], '?_pjax=%23main') !== false;
         </div>
 
     </header>
-
+    <?php else: ?>
+        <title><?php if (is_home()||is_search()) { bloginfo('name');print " | "; bloginfo('description');  } else { wp_title(''); print " - "; bloginfo('name'); } ?> </title>
     <?php endif;?>
 
     <div id="main">
