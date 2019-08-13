@@ -16,10 +16,10 @@
 <script type="text/javascript">
     $(document).pjax('a', '#main', {fragment:'#main', timeout:8000});
     $(document).on('pjax:send', function() {
-        $('#main').css("opacity","0.7");
+        $('#loading').show();
     })
     $(document).on('pjax:complete', function() {
-        $('#main').css("opacity","1");
+        $('#loading').hide();
     })
 </script>
 

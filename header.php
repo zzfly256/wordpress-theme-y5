@@ -12,6 +12,7 @@ $isPjax = strpos($_SERVER['REQUEST_URI'], '?_pjax=%23main') !== false;
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php if (is_home()||is_search()) { bloginfo('name');print " | "; bloginfo('description');  } else { wp_title(''); print " - "; bloginfo('name'); } ?> </title>
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css">
 </head>
 <body class="container">
@@ -72,8 +73,8 @@ $isPjax = strpos($_SERVER['REQUEST_URI'], '?_pjax=%23main') !== false;
     <?php else: ?>
         <title><?php if (is_home()||is_search()) { bloginfo('name');print " | "; bloginfo('description');  } else { wp_title(''); print " - "; bloginfo('name'); } ?> </title>
     <?php endif;?>
-
-    <div id="main">
+    <div id="loading"></div>
+    <div id="main" class="animated fadeInUp faster">
         <nav class="menu">
             <?php if (function_exists('getBreadcrumbs')){getBreadcrumbs(); } ?>
 

@@ -129,6 +129,16 @@ header {
       #main nav .search:focus {
         width: 38.2%; }
 
+#loading {
+  background: url(http://119.29.28.134/loading.gif);
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 10px;
+  background-size: 100% 100%;
+  top: 10px;
+  display: none; }
+
 #content article {
   background: #ffffff;
   float: left;
