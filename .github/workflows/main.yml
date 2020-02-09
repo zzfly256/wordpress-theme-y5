@@ -1,0 +1,19 @@
+name: WordPress-Theme-CI
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Pull Themes
+      uses: appleboy/ssh-action@v0.0.2
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: |
+          uptime
+          cd /data/services/blog/wp-content/themes/wordpress-theme-y5 && git pull
+        
