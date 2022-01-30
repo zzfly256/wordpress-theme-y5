@@ -15,5 +15,5 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           uptime
-          cd /data/services/blog/wp-content/themes/wordpress-theme-y5 && git pull
+          # cd /data/services/blog/wp-content/themes/wordpress-theme-y5 && git pull
         

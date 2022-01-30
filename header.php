@@ -11,8 +11,8 @@ $isPjax = strpos($_SERVER['REQUEST_URI'], '?_pjax=%23main') !== false;
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php if (is_home()||is_search()) { bloginfo('name');print " | "; bloginfo('description');  } else { wp_title(''); print " - "; bloginfo('name'); } ?> </title>
-    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+    <link href="//lib.baomitu.com/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//lib.baomitu.com/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css">
 </head>
 <body class="container">
