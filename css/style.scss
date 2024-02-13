@@ -470,10 +470,15 @@ header {
 /* 底部标签 */
 #links {
   width: 100%;
-  background: #ffffff;
+  background: #f1f1f1;
   float: left;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 1rem 1rem 0.6rem 1rem;
+
+  & span {
+    float: left;
+  }
 
   & li {
     display: block;
@@ -483,14 +488,14 @@ header {
 
     & a {
       padding: 5px 12px 5px 12px;
-      margin-right: 10px;
+      //margin-right: 10px;
       line-height: 25px;
       color: #555555;
       text-decoration: none;
       transition: 200ms;
 
       &:hover {
-        background: #eeeeee;
+        background: #dddddd;
       }
     }
   }
@@ -512,6 +517,19 @@ footer {
     font-size: 0.5rem;
     color: #aaaaaa;
     margin-right: 1rem;
+  }
+}
+
+.tag-info {
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding: 2rem 1.5rem;
+  margin: 0;
+  background: #f1f1f1;
+
+  & a{
+    color: #555555;
+    transition: 200ms;
   }
 }
 

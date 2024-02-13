@@ -1,5 +1,11 @@
 <?php get_header();?>
-            <div id="content">
+    <?php
+    if (is_tag()) :
+    $tag = get_queried_object();
+    ?>
+    <h1 class="tag-info">标签 <b><a href="<?php echo get_tag_link($tag->term_id);?>"> <?php echo single_tag_title("",false);?></a></b> 下共有文章 <b><?php echo $tag->count;?></b> 篇</h1>
+    <?php endif;?>
+    <div id="content">
 
                 <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
