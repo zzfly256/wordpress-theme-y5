@@ -17,7 +17,7 @@ $isPjax = strpos($_SERVER['REQUEST_URI'], '?_pjax=%23main') !== false;
         }
         $keywords = rtrim($keywords, ',');echo $keywords; }else{echo 'By烟花易冷,Rytia,草根站长,后端开发,数据开发,微服务架构,学生站长';} ?>">
     <meta name="description" content="<?php if (is_single()) { echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,''); }else{echo '草根学生站长的奋斗史 / 记录 Rytia 从学生站长到一名后端工程师的点滴以及成长笔记';} ?>">
-    <title><?php if (is_home()||is_search()) { bloginfo('name');print " | "; bloginfo('description');  } else { wp_title(''); print " - "; bloginfo('name'); } ?> </title>
+    <title><?php wp_title('');  ?></title>
     <link href="//lib.baomitu.com/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//lib.baomitu.com/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css">
@@ -79,7 +79,7 @@ $isPjax = strpos($_SERVER['REQUEST_URI'], '?_pjax=%23main') !== false;
 
     </header>
     <?php else: ?>
-        <title><?php if (is_home()||is_search()) { bloginfo('name');print " | "; bloginfo('description');  } else { wp_title(''); print " - "; bloginfo('name'); } ?> </title>
+        <title><?php wp_title('');  ?></title>
     <?php endif;?>
     <div id="loading"></div>
     <div id="main" class="animated fadeInUp faster">
